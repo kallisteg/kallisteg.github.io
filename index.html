@@ -46,7 +46,7 @@
             color: white;
             border-radius: 5px;
             cursor: pointer;
-            margin-top: 20px;
+            margin: 10px;
         }
         button:hover {
             background-color: #0056b3;
@@ -56,48 +56,23 @@
 </head>
 <body>
     <header>
-        <h1>Website Name</h1>
+        <h1>This is Kalliste's website wooo</h1>
     </header>
     <div class="container">
         <section class="content">
-            <h2>Main Content</h2>
-            <p>This is where the main content will go.</p>
-            <button onclick="getLocation()">Where in the world am I?</button>
-            <p id="location"></p>
+            <h2>Who's this</h2>
+            <p>Watch out I'm a coder, gonna hack ya</p>
+            <button onclick="replaceWithEmoji(this, '👯‍♀️')">A friend</button>
+            <button onclick="replaceWithEmoji(this, '🕵️‍♂️')">A stranger</button>
+            <button onclick="replaceWithEmoji(this, '💌')">A secret admirer</button>
         </section>
     </div>
     <footer>
-        <p>&copy; 2025 Your Website</p>
+        <p>&copy; 2025 Kalliste's Website</p>
     </footer>
     <script>
-        function getLocation() {
-            if (navigator.geolocation) {
-                navigator.geolocation.getCurrentPosition(showPosition, showError);
-            } else {
-                document.getElementById("location").innerHTML = "Geolocation is not supported by this browser.";
-            }
-        }
-        
-        function showPosition(position) {
-            document.getElementById("location").innerHTML = 
-                "Latitude: " + position.coords.latitude + ", Longitude: " + position.coords.longitude;
-        }
-        
-        function showError(error) {
-            switch(error.code) {
-                case error.PERMISSION_DENIED:
-                    document.getElementById("location").innerHTML = "User denied the request for Geolocation.";
-                    break;
-                case error.POSITION_UNAVAILABLE:
-                    document.getElementById("location").innerHTML = "Location information is unavailable.";
-                    break;
-                case error.TIMEOUT:
-                    document.getElementById("location").innerHTML = "The request to get user location timed out.";
-                    break;
-                case error.UNKNOWN_ERROR:
-                    document.getElementById("location").innerHTML = "An unknown error occurred.";
-                    break;
-            }
+        function replaceWithEmoji(button, emoji) {
+            button.outerHTML = `<span style="font-size: 24px;">${emoji}</span>`;
         }
     </script>
 </body>
