@@ -33,23 +33,38 @@
             width: 100%;
             padding: 20px;
         }
-        footer {
-            text-align: center;
-            padding: 10px;
-            margin-top: auto;
+        .button-section {
+            margin-bottom: 20px;
         }
         button {
-            padding: 10px 20px;
-            font-size: 16px;
+            padding: 8px 15px;
+            font-size: 14px;
             border: none;
             background-color: #007BFF;
             color: white;
             border-radius: 5px;
             cursor: pointer;
-            margin: 10px;
+            margin: 5px;
         }
         button:hover {
             background-color: #0056b3;
+        }
+        .blog-section {
+            width: 100%;
+            margin-top: 20px;
+        }
+        .blog-entry {
+            margin: 10px 0;
+            cursor: pointer;
+            color: #007BFF;
+        }
+        .blog-entry:hover {
+            text-decoration: underline;
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            margin-top: auto;
         }
     </style>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
@@ -60,11 +75,18 @@
     </header>
     <div class="container">
         <section class="content">
-            <h2>Who's this</h2>
-            <p>Watch out I'm a coder, gonna hack ya</p>
-            <button onclick="replaceWithEmoji(this, '👯‍♀️')">A friend</button>
-            <button onclick="replaceWithEmoji(this, '🕵️‍♂️')">A stranger</button>
-            <button onclick="replaceWithEmoji(this, '💌')">A secret admirer</button>
+            <div class="button-section">
+                <button onclick="replaceWithEmoji(this, '👯‍♀️')">A friend</button>
+                <button onclick="replaceWithEmoji(this, '🕵️‍♂️')">A stranger</button>
+                <button onclick="replaceWithEmoji(this, '💌')">A secret admirer</button>
+            </div>
+
+            <h2>Blog</h2>
+            <div class="blog-section">
+                <div class="blog-entry" onclick="window.location.href='blog1.html'">Blog Post 1</div>
+                <div class="blog-entry" onclick="window.location.href='blog2.html'">Blog Post 2</div>
+                <div class="blog-entry" onclick="window.location.href='blog3.html'">Blog Post 3</div>
+            </div>
         </section>
     </div>
     <footer>
