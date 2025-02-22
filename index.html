@@ -3,54 +3,100 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog Post Title</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Website Wireframe</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Poppins', sans-serif;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            text-align: center;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        header {
+            padding: 20px;
+        }
+        .content {
+            width: 100%;
+            padding: 20px;
+        }
+        .button-section {
+            margin-bottom: 20px;
+        }
+        button {
+            padding: 8px 15px;
+            font-size: 14px;
+            border: none;
+            background-color: #007BFF;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 5px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .blog-section {
+            width: 100%;
+            margin-top: 20px;
+        }
+        .blog-entry {
+            margin: 10px 0;
+            cursor: pointer;
+            color: #007BFF;
+        }
+        .blog-entry:hover {
+            text-decoration: underline;
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            margin-top: auto;
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
-        <nav>
-            <ul>
-                <li><a href="/">Home</a></li>
-                <li><a href="/about">About</a></li>
-                <li><a href="/blog">Blog</a></li>
-            </ul>
-        </nav>
+        <h1>This is Kalliste's website wooo</h1>
     </header>
-    
-    <main>
-        <article class="blog-post">
-            <header class="post-header">
-                <h1>Blog Post Title</h1>
-                <p class="post-meta">Posted on February 22, 2025 by <a href="/author">Your Name</a></p>
-            </header>
+    <div class="container">
+        <section class="content">
+            <h2>Who are you?</h2>
+            <div class="button-section">
+                <button onclick="replaceWithEmoji(this, '👯‍♀️')">A friend</button>
+                <button onclick="replaceWithEmoji(this, '🕵️‍♂️')">A stranger</button>
+                <button onclick="replaceWithEmoji(this, '💌')">A secret admirer</button>
+            </div>
 
-            <section class="post-content">
-                <p>Welcome to my latest blog post! In this article, we’ll dive into some interesting insights about the tech world, CRM strategies, and startup life.</p>
-
-                <h2>Subheading 1: The Power of CRM</h2>
-                <p>Customer Relationship Management (CRM) is essential for businesses looking to streamline communication and build stronger customer relationships...</p>
-
-                <h2>Subheading 2: Trends in Startup Growth</h2>
-                <p>Startups are evolving quickly, and the key to success often lies in understanding market demands, trends, and utilizing technology to scale efficiently...</p>
-
-                <img src="your-image.jpg" alt="Tech illustration" class="post-image">
-
-                <p>Conclusion: CRM and understanding market trends are essential for staying ahead in today's competitive landscape. I hope this post has helped you gain some new insights!</p>
-            </section>
-
-            <footer class="post-footer">
-                <p>Share this post:</p>
-                <ul>
-                    <li><a href="#">Facebook</a></li>
-                    <li><a href="#">Twitter</a></li>
-                    <li><a href="#">LinkedIn</a></li>
-                </ul>
-            </footer>
-        </article>
-    </main>
-
+            <h2>Blog</h2>
+            <div class="blog-section">
+                <div class="blog-entry" onclick="window.location.href='blog1.html'">Blog Post 1</div>
+                <div class="blog-entry" onclick="window.location.href='blog2.html'">Blog Post 2</div>
+                <div class="blog-entry" onclick="window.location.href='blog3.html'">Blog Post 3</div>
+            </div>
+        </section>
+    </div>
     <footer>
-        <p>&copy; 2025 Your Blog Name. All rights reserved.</p>
+        <p>&copy; 2025 Kalliste's Website</p>
     </footer>
+    <script>
+        function replaceWithEmoji(button, emoji) {
+            button.outerHTML = `<span style="font-size: 24px;">${emoji}</span>`;
+        }
+    </script>
 </body>
 </html>
