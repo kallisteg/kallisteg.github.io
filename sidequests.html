@@ -28,6 +28,7 @@
     }
 
     p {
+      font-family: monospace;
       font-size: 1.1rem;
       margin-bottom: 1rem;
       color: #555;
@@ -57,6 +58,28 @@
     <a href="https://x.com/kallisteg" target="_blank">Twitter</a>
     <a href="index.html">Home</a>
   </div>
+  <p id="countdown" style="font-family:monospace; font-size: 1rem; font-weight: bold;"></p>
+  
+  <script>
+    function updateCountdown() {
+      const targetDate = new Date("October 12, 2025");
+      const today = new Date();
+      const timeDiff = targetDate - today;
+  
+      if (timeDiff <= 0) {
+        document.getElementById("countdown").textContent = "The day has arrived!";
+        return;
+      }
+  
+      const daysLeft = Math.ceil(timeDiff / (1000 * 60 * 60 * 24));
+      document.getElementById("countdown").textContent = `${daysLeft} day${daysLeft === 1 ? '' : 's'} remaining until Oct 12`;
+    }
+  
+    updateCountdown();
+    // Optional: Update every day in case the user leaves the tab open
+    setInterval(updateCountdown, 86400000); // 1 day in ms
+  </script>
+  
 </body>
 </html>
 
